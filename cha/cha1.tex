@@ -1,0 +1,157 @@
+\chapter{概述}
+\begin{center}
+    \textcolor[RGB]{255, 0, 0}{\faHeart}我记得她很容易哭鼻子,记得她喜欢聊以前的事.记得她在信纸上为我写的每个字,却再也没有见过她一次.\textcolor[RGB]{255, 0, 0}{\faHeart}
+\end{center}
+\rightline{——《未闻花名》}
+\vspace{-5pt}
+\begin{center}
+    \pgfornament[width=0.36\linewidth,color=lsp]{88}
+\end{center}
+
+\section{互联网的组成}
+\begin{itemize}
+    \item 边缘部分（又称边缘子网）：
+    
+    由所有连接在互联网上的主机组成。这部分是用户直接使用的，
+    用来通信（传送数据，音频或者视频）和资源共享
+    \item 核心部分（又称通信子网）：
+    
+    有大量网络和连接这些网络的路由器组成。这部分是为边缘部分提供服务的
+    （提供连通性和交换）
+\end{itemize}
+互联网的边缘部分：连接在互联网上的所有的主机，又称为\textcolor{red}{端系统}
+
+\textcolor{green}{小的端系统}：个人电脑，智能手机等
+
+\textcolor{green}{大的端系统}：大型电脑
+
+\textcolor{green}{拥有者}：个人，单位，或某个ISP
+
+\section{互联网的通信}
+\subsection{端到端的概念}
+\textcolor{red}{主机A和主机B进行通信:}
+
+运行在主机A上的某个程序和运行在主机B上的另一个程序进行通信。即主机A
+的某个进程和主机B上的另一个进程进行通信。简称为
+\textcolor{blue}{计算机之间通信}
+
+PS:在操作系统中学过同一个计算机的不同的进程之间是可以通信的，但是现在端到端的通信
+是在不同的计算机之间通过网络进行通信。
+
+\subsection{俩种通信方式}
+\begin{itemize}
+    \item \textcolor{red}{客户服务器方式(C/S方式):}
+    
+    即Client/Server方法，简称为C/S方式
+
+    客户和服务器都是通信中所涉及的俩个应用进程。
+
+    客户/服务器:
+
+    进程之间服务和被服务的关系。客户是服务的\textcolor{red}{请求方},
+    服务器是服务的\textcolor{red}{提供方}
+    
+    \textcolor{red}{客服端软件特点:}
+
+    被调用后运行，在打算通信时主动向远地服务器发起通信（请求服务）。因此，客户程序
+    必须知道服务器程序的地址
+
+    不需要特殊的硬件和很复杂的操作系统
+
+    \textcolor{red}{服务器软件特点:}
+
+    一种专门用来提供
+    \textcolor{red}{某种服务的程序}，可同时处理多个远地或本地客户的请求(例如:IIS,Apache,Profted等)
+
+    启动后一直
+    \textcolor{red}{不停地运行着},被动的
+    \textcolor{red}{等待并接受}来自客户的
+    \textcolor{red}{通信请求}，服务器程序不需要知道客户程序的地址。
+    
+    一般需要
+    \textcolor{red}{强大的硬件和高级的操作系统}支持
+   
+    资源集中在服务器上，优点：数据容易备份，安全性好，缺点:当服务器出问题时就无法提供服务了
+
+    
+    
+    PS:客服与服务器的通信关系建立后，通信可以是\textcolor{red}{双向的},
+    客户和服务器都可\textcolor{red}{发送和接收数据}
+   
+
+
+    \item \textcolor{red}{对等方式(P2P方式):}
+    
+    即Peer-to-Peer方式，简称为P2P方式
+
+    \textcolor{red}{对等连接:}俩个通信主机
+    \textcolor{red}{不区分}哪一个是服务请求方还是服务提供方:
+
+    只要俩个主机都运行了对等连接软件(P2P软件),他们就可以进行平等的、对等连接通信
+
+    对等连接方式仍然是使用客户服务器模式，每一个主机既是客户又是服务器
+
+    对等连接方式可支持
+    \textcolor{red}{大量对等用户}(如上百万个)同时工作
+
+    资源分散，一个主机需要的资源可能分散在其他的主机上，他可以就近的先查看与它相连的主机上有无，层层的散发查找
+
+    
+\end{itemize}
+
+\section{计算机网络的性能}
+\subsection{计算机网络的性能指标}
+\begin{itemize}
+    \item 速率
+    
+    \textcolor{red}{速率}是计算机网络中最重要的一个性能指标，指的是数据的传送速
+  率，它也称为
+  \textcolor{red}{数据率}(data rate)或\textcolor{red}{比特率}(bit rate)。
+速率往往是指
+\textcolor{red}{额定速率}或
+\textcolor{red}{标称速率}，非实际运行速率。
+
+\textcolor{red}{速率的单位：}
+bit/s（基本单位），或Kbit/s、Mbit/s、Gbit/s等（bps）；
+
+例如4 × $10^(10)$bit/s的数据率就记为40 Gbit/s（乘$10^(3)$）。
+
+注意与
+\textcolor{red}{存储容量的区别}（乘$2^(10)$）
+
+Byte(字节，基本单位)、KByte(KB)、MByte(MB)、
+GByte(GB), 1 Byte = 8 bit。1KB=$2^(10)$B=1024B,
+
+速率是乘以$10^(3)$，而字节是$2^(10)$
+
+    \item 带宽
+    
+    "带宽"(bandwidth)是指
+    \textcolor{red}{信号具有的频率成分范围}。也可表示为
+\textcolor{red}{信道的频带宽度}（允许通过的最高频率成分与最低频率成分之差），其
+单位是赫（或千赫、兆赫、吉赫等）。
+
+例如：人耳可辨别的声音约在16~20000Hz之间，但只要保留
+300~3400Hz这段范围内的声音，仍能清晰辨别话音信号。故电
+话信道的带宽为3400-300=3100Hz。
+
+
+    \item 吞吐量
+    \item 时延
+    \item 时延带宽
+    \item 往返时间
+    \item 利用率
+\end{itemize}
+\subsection{信息的度量}
+比特概念:
+
+香农1948年的论文《通信的数学理论》中第一次出现
+\textcolor{red}{"比特"}。在香农的理论中，
+\textcolor{red}{比特成为信息的基本单位}。回答一个是/否问需要1比
+特信息。
+
+比特(bit)也是计算机中
+\textcolor{red}{数据量的单位}。比特来源于binary digit,
+表示一个“二进制数字”，因此一个比特表示二进制数字中的1或0。
+
+
